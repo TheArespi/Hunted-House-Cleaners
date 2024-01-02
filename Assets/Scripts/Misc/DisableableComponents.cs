@@ -5,16 +5,26 @@ using UnityEngine;
 public class DisableableComponents : MonoBehaviour
 {
     public List<Behaviour> componentsToDisable = new List<Behaviour>();
-    public bool disable = false;
+    public bool Disable
+    {
+        get => _disable;
+        set
+        {
+            _disable = value;
+            _SetDisable(value);
+        }
+    }
+    private bool _disable = false;
 
     private void Start()
     {
-        if (!disable)
-            return;
-
+        _SetDisable(_disable);
+    }
+    private void _SetDisable(bool pDisable)
+    {
         foreach (Behaviour component in componentsToDisable)
         {
-            component.enabled = false;
+            component.enabled = pDisable;
         }
     }
 }
