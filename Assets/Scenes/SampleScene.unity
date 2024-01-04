@@ -2706,6 +2706,9 @@ GameObject:
   m_Component:
   - component: {fileID: 775283186}
   - component: {fileID: 775283185}
+  - component: {fileID: 775283188}
+  - component: {fileID: 775283187}
+  - component: {fileID: 775283189}
   m_Layer: 0
   m_Name: Walis
   m_TagString: Untagged
@@ -2774,12 +2777,78 @@ Transform:
   m_GameObject: {fileID: 775283184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0239577, y: 2.689256, z: 0}
+  m_LocalPosition: {x: -3.0239577, y: 2.689256, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &775283187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775283184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d106977df7b73da4e93908d9d3fcf426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 775283185}
+  spritePool:
+  - {fileID: -1093553010, guid: b9998c4362d0b9149905f0ff5be1d30a, type: 3}
+  - {fileID: -1824224948, guid: b9998c4362d0b9149905f0ff5be1d30a, type: 3}
+  - {fileID: -861403485, guid: b9998c4362d0b9149905f0ff5be1d30a, type: 3}
+  - {fileID: 1864436404, guid: b9998c4362d0b9149905f0ff5be1d30a, type: 3}
+--- !u!114 &775283188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775283184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8782c88ba4354334399870aa2f24b52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryItem: {fileID: 11400000, guid: 2151fb3cf5a61904ea2ff81287fb2432, type: 2}
+--- !u!58 &775283189
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775283184}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &810495970
 GameObject:
   m_ObjectHideFlags: 0
