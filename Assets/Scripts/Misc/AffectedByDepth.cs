@@ -13,7 +13,7 @@ public class AffectedByDepth : MonoBehaviour
     {
         Gizmos.color = Color.red;
 
-        float lineSize = transform.right.x - transform.position.x;
+        float lineSize = transform. right.x - transform.position.x;
 
         Gizmos.DrawLine(
             new Vector2(transform.position.x - lineSize / 2, transform.position.y + offset),

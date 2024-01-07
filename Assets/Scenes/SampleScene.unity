@@ -207,6 +207,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &58453041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 58453043}
+  - component: {fileID: 58453042}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &58453042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58453041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d017be77d8d2544bb2954c4f67cb8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BroomPrefab: {fileID: 3183320140858534793, guid: 3ff6cd1e94cc15c4aaa4f5bfa99c69b4, type: 3}
+--- !u!4 &58453043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58453041}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5236074, y: 3.0743546, z: -1.0434442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &301312418 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5307147586089131359, guid: e0d7a42f26137ba47940b713f8cff244, type: 3}
@@ -2709,6 +2754,7 @@ GameObject:
   - component: {fileID: 775283188}
   - component: {fileID: 775283187}
   - component: {fileID: 775283189}
+  - component: {fileID: 775283190}
   m_Layer: 0
   m_Name: Walis
   m_TagString: Untagged
@@ -2813,7 +2859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8782c88ba4354334399870aa2f24b52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryItem: {fileID: 11400000, guid: 2151fb3cf5a61904ea2ff81287fb2432, type: 2}
+  item: 1
 --- !u!58 &775283189
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2849,6 +2895,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &775283190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775283184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808fdc4faf0a2464ebfbb0ad865d3ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &810495970
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,6 +3126,7 @@ GameObject:
   - component: {fileID: 979974452}
   - component: {fileID: 979974454}
   - component: {fileID: 979974453}
+  - component: {fileID: 979974455}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3169,6 +3228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 979974448}
+  inventory: {fileID: 979974455}
 --- !u!114 &979974452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3254,6 +3314,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6283582, y: 0.15702343}
   m_EdgeRadius: 0
+--- !u!114 &979974455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979974447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ffc15f6601ed1498b6a1e98b5d2ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventorySize: 2
 --- !u!1 &1147162812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,3 +3797,4 @@ SceneRoots:
   - {fileID: 962842574}
   - {fileID: 457898417}
   - {fileID: 775283186}
+  - {fileID: 58453043}

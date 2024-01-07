@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public PlayerMovement playerMovement;
+    public Inventory inventory;
     // Update is called once per frame
     void Update()
     {
@@ -27,5 +28,8 @@ public class PlayerController : MonoBehaviour
             playerMovement.moveDown();
         else if (Input.GetKeyUp(KeyCode.S))
             playerMovement.stopDown();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            inventory.dropOnHand();
     }
 }
