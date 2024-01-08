@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorInteractionArea : Interactable
+public class BroomBehaviour : Interactable
 {
-    public DoorBehaviour doorObj;
-
+    public Acquireable acquireable;
     protected override void Interact()
     {
-        doorObj.InteractDoor();
+        acquireable.Acquire();
     }
 }

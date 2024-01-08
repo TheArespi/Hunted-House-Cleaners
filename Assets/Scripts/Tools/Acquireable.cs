@@ -16,31 +16,7 @@ public class Acquireable : MonoBehaviour
     {
         successfulPickUp.AddListener(successfullyPickedUp);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name != "Player")
-            return;
-
-        _playerCanAcquire = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.name != "Player")
-            return;
-
-        _playerCanAcquire = false;
-    }
-
-    private void Update()
-    {
-        
-        if (Input.GetKeyDown(KeyCode.Space) && _playerCanAcquire)
-        {
-            Debug.Log("Picked up");
-            playerPickedUp.Invoke(gameObject.name, item);
-        }
-    }
+    public void Acquire() => playerPickedUp.Invoke(gameObject.name, item);
     private void successfullyPickedUp(string itemName, bool success)
     {
         if (itemName != gameObject.name)

@@ -20,22 +20,16 @@ public class DoorBehaviour : MonoBehaviour
     {
         DisableUpdated();
     }
-    private void Update()
-    {
-        if (!_playerCanInteract)
-            return;
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _open = !_open;
-            DisableUpdated();
-            Debug.Log("Door is " + (_open ? "" : "not ") + "open");
-        }
-    }
     private void DisableUpdated()
     {
         openCollision.Disable = _open;
         closeCollision.Disable = !_open;
         animator.SetBool("open", _open);
+    }
+    public void InteractDoor()
+    {
+        _open = !_open;
+        DisableUpdated();
+        Debug.Log("Door is " + (_open ? "" : "not ") + "open");
     }
 }
