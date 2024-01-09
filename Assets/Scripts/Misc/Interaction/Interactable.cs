@@ -22,7 +22,6 @@ public abstract class Interactable : MonoBehaviour
         if (collision.gameObject.name != playerObjectName)
             return;
         
-        spriteRenderer.color = Color.red;
         CanInteractStatus.Invoke(this, true);
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -30,7 +29,6 @@ public abstract class Interactable : MonoBehaviour
         if (collision.gameObject.name != playerObjectName)
             return;
 
-        spriteRenderer.color = Color.white;
         CanInteractStatus.Invoke(this, false);
     }
     private void Update()
@@ -40,6 +38,10 @@ public abstract class Interactable : MonoBehaviour
         if (Input.GetKeyDown(interactKey))
             Interact();
     }
-    private void interactableSelect(Interactable pInteractable) => _canInteract = pInteractable.name == name;
+    private void interactableSelect(Interactable pInteractable)
+    {
+        _canInteract = pInteractable && pInteractable.name == name;
+        spriteRenderer.color = pInteractable && pInteractable.name == name ? Color.red : Color.white;
+    }
     protected abstract void Interact();
 }

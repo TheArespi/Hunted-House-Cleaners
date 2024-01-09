@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2018628134086446259}
   - component: {fileID: 4681482204594974571}
   - component: {fileID: 8317530281723881459}
+  - component: {fileID: 1281587451375856511}
   m_Layer: 0
   m_Name: Walis
   m_TagString: Untagged
@@ -166,3 +167,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808fdc4faf0a2464ebfbb0ad865d3ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1281587451375856511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183320140858534793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad6e79838e8e96347bd934008823b281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8415361664537745323}
+  interactKey: 32
+  playerObjectName: Player
+  acquireable: {fileID: 4136301770760662673}
